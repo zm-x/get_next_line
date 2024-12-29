@@ -118,8 +118,6 @@ char	*get_next_line(int fd)
 		if (status[1] <= 0 && cpy)
 			(free(cpy), cpy = NULL);
 	}
-	if (*reminder == '\0' && status[1] <= 0)
-		return (free_after_last_line(&reminder, cpy));
 	return (return_line(&reminder));
 }
 /*
